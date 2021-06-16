@@ -21,7 +21,7 @@ class CoinRandomedChartWidget extends StatefulWidget {
 }
 
 class _CoinRandomedChartWidgetState extends State<CoinRandomedChartWidget> {
-  List<bool> isSelected = List.generate(5, (index) => false);
+  List<bool> _isSelected = [true, false, false, false, false];
   @override
   Widget build(BuildContext context) {
     return SliverPersistentHeader(
@@ -50,61 +50,31 @@ class _CoinRandomedChartWidgetState extends State<CoinRandomedChartWidget> {
                   color: Colors.green,
                   data: widget.data),
               ToggleButtons(
+                borderRadius: BorderRadius.circular(8.0),
                 borderColor: Colors.indigoAccent,
                 color: Colors.white,
                 fillColor: Colors.green,
                 selectedColor: Colors.white,
+                selectedBorderColor: Colors.indigoAccent,
                 children: [
-                  TextButton(
-                    onPressed: () {},
-                    child: Text(
-                      'Today',
-                      style: Theme.of(context).textTheme.subtitle1,
-                    ),
-                  ),
-                  TextButton(
-                    onPressed: () {},
-                    child: Text(
-                      '1W',
-                      style: Theme.of(context).textTheme.subtitle1,
-                    ),
-                  ),
-                  TextButton(
-                    onPressed: () {},
-                    child: Text(
-                      '1M',
-                      style: Theme.of(context).textTheme.subtitle1,
-                    ),
-                  ),
-                  TextButton(
-                    onPressed: () {},
-                    child: Text(
-                      '3M',
-                      style: Theme.of(context).textTheme.subtitle1,
-                    ),
-                  ),
-                  TextButton(
-                    onPressed: () {},
-                    child: Text(
-                      '6M',
-                      style: Theme.of(context).textTheme.subtitle1,
-                    ),
-                  ),
+                  ToggleButtonWidget(name: "Today"),
+                  ToggleButtonWidget(name: "1W"),
+                  ToggleButtonWidget(name: "1M"),
+                  ToggleButtonWidget(name: "3M"),
+                  ToggleButtonWidget(name: "6M"),
                 ],
-                onPressed: (int index) {
+                isSelected: _isSelected,
+                onPressed: (int newIndex) {
                   setState(() {
-                    for (int buttonIndex = 0;
-                        buttonIndex < isSelected.length;
-                        buttonIndex++) {
-                      if (buttonIndex == index) {
-                        isSelected[buttonIndex] = !isSelected[buttonIndex];
+                    for (int i = 0; i < _isSelected.length; i++) {
+                      if (i == newIndex) {
+                        _isSelected[i] = true;
                       } else {
-                        isSelected[buttonIndex] = false;
+                        _isSelected[i] = false;
                       }
                     }
                   });
                 },
-                isSelected: isSelected,
               ),
               const SizedBox(
                 height: 8.0,

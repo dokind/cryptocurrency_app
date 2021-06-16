@@ -60,29 +60,81 @@ class CoinDetailScreen extends StatelessWidget {
               coinPrice: coinPrice, outputDate: outputDate, data: data),
           SliverToBoxAdapter(
             child: Container(
-              height: 800,
+              height: 600,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.only(bottom: 24.0),
-                    child: Text(
-                      "2021 Flutter with dokind",
-                      style: Theme.of(context).textTheme.headline5,
+                  Container(
+                    margin: const EdgeInsets.symmetric(horizontal: 16.0),
+                    height: 400.0,
+                    width: double.infinity,
+                    // color: Colors.blueGrey,
+                    child: Column(
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            Text(
+                              "Circulating Supply: ",
+                              style: Theme.of(context).textTheme.subtitle1,
+                            ),
+                            Text(
+                              coin.circulatingSupply.toString(),
+                              style: Theme.of(context).textTheme.headline6,
+                            ),
+                          ],
+                        ),
+                        const SizedBox(height: 8.0),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            Text(
+                              "Max Supply: ",
+                              style: Theme.of(context).textTheme.subtitle1,
+                            ),
+                            Text(
+                              coin.maxSupply.toString(),
+                              style: Theme.of(context).textTheme.headline6,
+                            ),
+                          ],
+                        ),
+                        const SizedBox(height: 8.0),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            Text(
+                              "Market pairs: ",
+                              style: Theme.of(context).textTheme.subtitle1,
+                            ),
+                            Text(
+                              coin.numMarketPairs.toString(),
+                              style: Theme.of(context).textTheme.headline6,
+                            ),
+                          ],
+                        ),
+                        const SizedBox(height: 8.0),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            Text(
+                              "Market Cap: ",
+                              style: Theme.of(context).textTheme.subtitle1,
+                            ),
+                            Text(
+                              coin.quoteModel.usdModel.marketCap
+                                  .toStringAsFixed(2),
+                              style: Theme.of(context).textTheme.headline6,
+                            ),
+                          ],
+                        ),
+                        const SizedBox(height: 8.0),
+                      ],
                     ),
                   ),
                 ],
               ),
             ),
           )
-          // SliverPersistentHeader(
-          //   pinned: true,
-          //   delegate: SliverAppBarDelegate(
-          //     minHeight: 400.0,
-          //     maxHeight: 400.0,
-          //     child:
-          //   ),
-          // ),
         ],
       ),
     );
