@@ -13,7 +13,6 @@ class CoinLogoWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    //
     var coinIconUrl =
         "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/128/color/";
     TextTheme textStyle = Theme.of(context).textTheme;

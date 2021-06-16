@@ -22,9 +22,10 @@ class CoinListWidget extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
-            padding: const EdgeInsets.only(left: 24.0),
+            padding:
+                const EdgeInsets.symmetric(horizontal: 24.0, vertical: 16.0),
             child: Text(
-              "Cryptocurrency",
+              "Crypto Currency",
               style: Theme.of(context).textTheme.headline5,
             ),
           ),

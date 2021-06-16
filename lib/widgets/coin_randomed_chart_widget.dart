@@ -76,9 +76,7 @@ class _CoinRandomedChartWidgetState extends State<CoinRandomedChartWidget> {
                   });
                 },
               ),
-              const SizedBox(
-                height: 8.0,
-              )
+              const SizedBox(height: 8.0)
             ],
           ),
         ),

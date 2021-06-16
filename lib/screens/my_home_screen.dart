@@ -32,16 +32,16 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.ac_unit),
-            label: 'list',
+            icon: Icon(Icons.stairs),
+            label: 'Crypto',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.business),
-            label: 'who',
+            icon: Icon(Icons.flutter_dash_rounded),
+            label: 'Flutter Dash',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.school),
-            label: 'you',
+            icon: Icon(Icons.person),
+            label: 'Profile',
           ),
         ],
         currentIndex: _selectedIndex,
