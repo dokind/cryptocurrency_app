@@ -1,7 +1,7 @@
 import 'package:coin_base_clone/models/chart_data_model.dart';
 import 'package:coin_base_clone/models/fetchCoins_models/fetch_coins_models.dart';
 import 'package:coin_base_clone/screens/coin_detail_screen.dart';
-import 'package:coin_base_clone/themes/custom_assets.dart';
+
 import 'package:coin_base_clone/widgets/coin_logo_widget.dart';
 import 'package:coin_base_clone/widgets/widgets.dart';
 
@@ -57,7 +57,8 @@ class CoinListWidget extends StatelessWidget {
                     height: 160.0,
                     width: double.infinity,
                     padding: const EdgeInsets.symmetric(vertical: 4.0),
-                    margin: CustomPadding.symetric168,
+                    margin: const EdgeInsets.symmetric(
+                        vertical: 8.0, horizontal: 16.0),
                     decoration: BoxDecoration(
                       color: Color.fromRGBO(0, 0, 0, 0.6),
                       borderRadius: BorderRadius.circular(16.0),

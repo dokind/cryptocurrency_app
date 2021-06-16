@@ -6,6 +6,7 @@ class SecondScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromRGBO(11, 12, 54, 1),
       body: CustomScrollView(
         slivers: [
           SliverAppBar(

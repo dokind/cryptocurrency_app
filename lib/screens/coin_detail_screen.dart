@@ -68,7 +68,6 @@ class CoinDetailScreen extends StatelessWidget {
                     margin: const EdgeInsets.symmetric(horizontal: 16.0),
                     height: 400.0,
                     width: double.infinity,
-                    // color: Colors.blueGrey,
                     child: Column(
                       children: [
                         Row(
